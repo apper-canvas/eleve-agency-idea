@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 import ClientFilters from "@/components/molecules/ClientFilters";
 import ClientGrid from "@/components/organisms/ClientGrid";
 import { clientService } from "@/services/api/clientService";

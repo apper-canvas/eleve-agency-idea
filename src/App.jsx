@@ -5,6 +5,7 @@ import Layout from "@/components/pages/Layout";
 import ModelsPage from "@/components/pages/ModelsPage";
 import ModelDetailPage from "@/components/pages/ModelDetailPage";
 import ClientsPage from "@/components/pages/ClientsPage";
+import ClientDetailPage from "@/components/pages/ClientDetailPage";
 import JobsPage from "@/components/pages/JobsPage";
 import BookingsPage from "@/components/pages/BookingsPage";
 import CalendarPage from "@/components/pages/CalendarPage";
@@ -20,8 +21,9 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<Navigate to="/models" replace />} />
             <Route path="models" element={<ModelsPage />} />
-            <Route path="models/:id" element={<ModelDetailPage />} />
+<Route path="models/:id" element={<ModelDetailPage />} />
             <Route path="clients" element={<ClientsPage />} />
+            <Route path="clients/:id" element={<ClientDetailPage />} />
             <Route path="jobs" element={<JobsPage />} />
             <Route path="bookings" element={<BookingsPage />} />
             <Route path="calendar" element={<CalendarPage />} />

@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import ClientCard from "@/components/molecules/ClientCard";
 import Loading from "@/components/ui/Loading";
 import Error from "@/components/ui/Error";
@@ -13,6 +14,7 @@ const ClientGrid = ({
   searchQuery = "",
   filters = {}
 }) => {
+  const navigate = useNavigate();
   if (loading) {
     return <Loading />;
   }
@@ -57,12 +59,13 @@ const ClientGrid = ({
   return (
     <div className="animate-fade-in">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-        {clients.map((client) => (
+{clients.map((client) => (
           <ClientCard
             key={client.Id}
             client={client}
             onClientUpdate={onClientUpdate}
-            className="animate-scale-in"
+            className="animate-scale-in cursor-pointer"
+            onClick={() => navigate(`/clients/${client.Id}`)}
           />
         ))}
       </div>
