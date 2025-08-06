@@ -1,20 +1,152 @@
-import React from "react";
-import ComingSoon from "@/components/organisms/ComingSoon";
+import React, { useEffect, useState } from "react";
+import { toast } from "react-toastify";
+import ClientFilters from "@/components/molecules/ClientFilters";
+import ClientGrid from "@/components/organisms/ClientGrid";
+import { clientService } from "@/services/api/clientService";
+import SearchBar from "@/components/molecules/SearchBar";
 
 const ClientsPage = () => {
+  const [clients, setClients] = useState([]);
+  const [filteredClients, setFilteredClients] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [filters, setFilters] = useState({
+    industry: 'all',
+    activityStatus: 'all'
+  });
+
+  // Load initial data
+  const loadClients = async () => {
+    setLoading(true);
+    setError(null);
+    try {
+      const data = await clientService.getAll();
+      setClients(data);
+    } catch (err) {
+      setError(err);
+      toast.error("Failed to load clients");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // Filter and search clients
+  const filterClients = async () => {
+    try {
+      const filtered = await clientService.search(searchQuery, filters);
+      setFilteredClients(filtered);
+    } catch (err) {
+      console.error("Failed to filter clients:", err);
+      setFilteredClients([]);
+    }
+  };
+
+  // Load data on component mount
+  useEffect(() => {
+    loadClients();
+  }, []);
+
+  // Apply filters and search when they change
+  useEffect(() => {
+    if (clients.length > 0) {
+      filterClients();
+    }
+  }, [clients, searchQuery, filters]);
+
+  const handleClientUpdate = (updatedClient) => {
+    setClients(prevClients =>
+      prevClients.map(client =>
+        client.Id === updatedClient.Id ? updatedClient : client
+      )
+    );
+  };
+
+  const handleAddClient = () => {
+    // In a real app, this would open a modal or navigate to add client form
+    toast.info("Add client functionality coming soon!");
+  };
+
+  const handleRetry = () => {
+    loadClients();
+  };
+
+  const handleSearch = (query) => {
+    setSearchQuery(query);
+  };
+
+  const handleFiltersChange = (newFilters) => {
+    setFilters(newFilters);
+  };
+
   return (
-    <div className="p-6">
-      <ComingSoon
-        title="Client Management"
-        description="Client database and company management system for streamlined relationship management and project coordination."
-        icon="Building2"
-        features={[
-          "Complete client database with company profiles",
-          "Contact management and communication history",
-          "Project and contract tracking",
-          "Invoice and payment management",
-          "Client relationship analytics"
-        ]}
+    <div className="p-6 space-y-6">
+      {/* Header */}
+      <div>
+        <h1 className="text-3xl font-display font-semibold text-primary mb-2">
+          Client Database
+        </h1>
+        <p className="text-gray-600">
+          Manage your client relationships and track business opportunities
+        </p>
+      </div>
+
+      {/* Search and Filters */}
+      <div className="space-y-4">
+        <SearchBar
+          placeholder="Search clients by company, industry, or contact person..."
+          onSearch={handleSearch}
+          className="max-w-md"
+        />
+        
+        <ClientFilters
+          filters={filters}
+          onFiltersChange={handleFiltersChange}
+          onAddClient={handleAddClient}
+        />
+      </div>
+
+      {/* Stats Summary */}
+      {!loading && !error && (
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+          <div className="bg-surface rounded-lg p-4 border border-gray-200">
+            <div className="text-2xl font-bold text-primary">{clients.length}</div>
+            <div className="text-sm text-gray-600">Total Clients</div>
+          </div>
+          <div className="bg-surface rounded-lg p-4 border border-gray-200">
+            <div className="text-2xl font-bold text-green-600">
+              {clients.filter(c => c.activityStatus === 'Active').length}
+            </div>
+            <div className="text-sm text-gray-600">Active Clients</div>
+          </div>
+          <div className="bg-surface rounded-lg p-4 border border-gray-200">
+            <div className="text-2xl font-bold text-accent">
+              {clients.reduce((sum, c) => sum + c.projectsCount, 0)}
+            </div>
+            <div className="text-sm text-gray-600">Total Projects</div>
+          </div>
+          <div className="bg-surface rounded-lg p-4 border border-gray-200">
+            <div className="text-2xl font-bold text-accent">
+              {new Intl.NumberFormat('en-US', {
+                style: 'currency',
+                currency: 'USD',
+                notation: 'compact'
+              }).format(clients.reduce((sum, c) => sum + c.totalRevenue, 0))}
+            </div>
+            <div className="text-sm text-gray-600">Total Revenue</div>
+          </div>
+        </div>
+      )}
+
+      {/* Client Grid */}
+      <ClientGrid
+        clients={filteredClients}
+        loading={loading}
+        error={error}
+        onRetry={handleRetry}
+        onClientUpdate={handleClientUpdate}
+        searchQuery={searchQuery}
+        filters={filters}
       />
     </div>
   );
