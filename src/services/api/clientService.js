@@ -28,23 +28,6 @@ export const clientService = {
     });
   },
 
-  // Create new client
-  create: (clientData) => {
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        const newClient = {
-          ...clientData,
-          Id: Math.max(...clients.map(c => c.Id), 0) + 1,
-          lastActivity: new Date().toISOString(),
-          projectsCount: 0,
-          totalRevenue: 0
-        };
-        clients.push(newClient);
-        toast.success('Client added successfully!');
-        resolve({ ...newClient });
-      }, 500);
-    });
-  },
 
   // Update existing client
   update: (id, updates) => {
