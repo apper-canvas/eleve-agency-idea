@@ -102,7 +102,7 @@ export const clientService = {
   },
 
   // Search clients
-  search: (query, filters = {}) => {
+search: (query, filters = {}) => {
     return new Promise((resolve) => {
       setTimeout(() => {
         let filteredClients = [...clients];
@@ -131,8 +131,68 @@ export const clientService = {
           );
         }
 
+        // Apply budget range filter
+        if (filters.budgetRange && filters.budgetRange !== 'all') {
+          filteredClients = filteredClients.filter(client => {
+            const revenue = client.totalRevenue || 0;
+            switch (filters.budgetRange) {
+              case 'Under $50k':
+                return revenue < 50000;
+              case '$50k - $100k':
+                return revenue >= 50000 && revenue <= 100000;
+              case '$100k - $250k':
+                return revenue > 100000 && revenue <= 250000;
+              case 'Over $250k':
+                return revenue > 250000;
+              default:
+                return true;
+            }
+          });
+        }
+
         resolve(filteredClients);
       }, 300);
+    });
+  },
+
+  create: (clientData) => {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        try {
+          // Generate new ID
+          const newId = Math.max(...clients.map(c => c.Id)) + 1;
+          
+          // Create new client with default values
+          const newClient = {
+            Id: newId,
+            companyName: clientData.companyName,
+            industry: clientData.industry,
+            logo: `https://ui-avatars.com/api/?name=${encodeURIComponent(clientData.companyName)}&size=100&background=random`,
+            contactPerson: clientData.contactPerson,
+            email: clientData.email,
+            phone: clientData.phone,
+            website: clientData.website || '',
+            address: clientData.address || '',
+            activityStatus: 'Active',
+            lastActivity: new Date().toISOString(),
+            projectsCount: 0,
+            totalRevenue: 0,
+            contractStatus: 'Active',
+            notes: clientData.notes || '',
+            budget: clientData.budget || '',
+            communicationPreference: clientData.communicationPreference || 'Email',
+            projectType: clientData.projectType || 'Fashion',
+            priority: clientData.priority || 'Medium'
+          };
+
+          // Add to clients array
+          clients.unshift(newClient);
+          
+          resolve(newClient);
+        } catch (error) {
+          reject(new Error('Failed to create client'));
+        }
+      }, 500);
     });
   }
 };

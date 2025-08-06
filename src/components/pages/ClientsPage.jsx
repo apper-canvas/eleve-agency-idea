@@ -5,16 +5,19 @@ import ClientFilters from "@/components/molecules/ClientFilters";
 import ClientGrid from "@/components/organisms/ClientGrid";
 import { clientService } from "@/services/api/clientService";
 import SearchBar from "@/components/molecules/SearchBar";
+import ClientCreateForm from "@/components/molecules/ClientCreateForm";
 
 const ClientsPage = () => {
-  const [clients, setClients] = useState([]);
+const [clients, setClients] = useState([]);
   const [filteredClients, setFilteredClients] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
+  const [showCreateForm, setShowCreateForm] = useState(false);
   const [filters, setFilters] = useState({
     industry: 'all',
-    activityStatus: 'all'
+    activityStatus: 'all',
+    budgetRange: 'all'
   });
 
   // Load initial data
@@ -63,9 +66,13 @@ const ClientsPage = () => {
     );
   };
 
-  const handleAddClient = () => {
-    // In a real app, this would open a modal or navigate to add client form
-    toast.info("Add client functionality coming soon!");
+const handleAddClient = () => {
+    setShowCreateForm(true);
+  };
+
+  const handleClientCreated = (newClient) => {
+    setClients(prev => [newClient, ...prev]);
+    loadClients(); // Refresh the list to ensure consistency
   };
 
   const handleRetry = () => {
@@ -148,6 +155,11 @@ const ClientsPage = () => {
         onClientUpdate={handleClientUpdate}
         searchQuery={searchQuery}
         filters={filters}
+      />
+<ClientCreateForm
+        isOpen={showCreateForm}
+        onClose={() => setShowCreateForm(false)}
+        onClientCreated={handleClientCreated}
       />
     </div>
   );

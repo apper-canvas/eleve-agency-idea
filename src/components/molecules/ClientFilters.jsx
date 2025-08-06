@@ -24,8 +24,15 @@ const ClientFilters = ({
     { value: 'Active', label: 'Active' },
     { value: 'Inactive', label: 'Inactive' },
     { value: 'Pending', label: 'Pending' }
-  ];
+];
 
+  const budgetRangeOptions = [
+    { label: 'All Budget Ranges', value: 'all' },
+    { label: 'Under $50k', value: 'Under $50k' },
+    { label: '$50k - $100k', value: '$50k - $100k' },
+    { label: '$100k - $250k', value: '$100k - $250k' },
+    { label: 'Over $250k', value: 'Over $250k' }
+  ];
   const handleFilterChange = (key, value) => {
     onFiltersChange({
       ...filters,
@@ -33,14 +40,15 @@ const ClientFilters = ({
     });
   };
 
-  const handleClearFilters = () => {
+const handleClearFilters = () => {
     onFiltersChange({
       industry: 'all',
-      activityStatus: 'all'
+      activityStatus: 'all',
+      budgetRange: 'all'
     });
   };
 
-  const hasActiveFilters = filters.industry !== 'all' || filters.activityStatus !== 'all';
+const hasActiveFilters = filters.industry !== 'all' || filters.activityStatus !== 'all' || filters.budgetRange !== 'all';
 
   return (
     <div className={cn("flex flex-wrap items-center gap-4", className)}>
@@ -57,6 +65,12 @@ const ClientFilters = ({
         value={filters.activityStatus || 'all'}
         onChange={(value) => handleFilterChange('activityStatus', value)}
       />
+<FilterDropdown
+          label="Budget Range"
+          options={budgetRangeOptions}
+          value={filters.budgetRange || 'all'}
+          onChange={(value) => handleFilterChange('budgetRange', value)}
+        />
 
       {hasActiveFilters && (
         <Button
