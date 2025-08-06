@@ -1,0 +1,66 @@
+[
+  {
+    "Id": 1,
+    "label": "Models",
+    "icon": "Users",
+    "path": "/models",
+    "isActive": true,
+    "isAvailable": true
+  },
+  {
+    "Id": 2,
+    "label": "Clients",
+    "icon": "Building2",
+    "path": "/clients",
+    "isActive": false,
+    "isAvailable": false
+  },
+  {
+    "Id": 3,
+    "label": "Jobs",
+    "icon": "Briefcase",
+    "path": "/jobs",
+    "isActive": false,
+    "isAvailable": false
+  },
+  {
+    "Id": 4,
+    "label": "Bookings",
+    "icon": "Calendar",
+    "path": "/bookings",
+    "isActive": false,
+    "isAvailable": false
+  },
+  {
+    "Id": 5,
+    "label": "Calendar",
+    "icon": "CalendarDays",
+    "path": "/calendar",
+    "isActive": false,
+    "isAvailable": false
+  },
+  {
+    "Id": 6,
+    "label": "Messages",
+    "icon": "MessageSquare",
+    "path": "/messages",
+    "isActive": false,
+    "isAvailable": false
+  },
+  {
+    "Id": 7,
+    "label": "Documents",
+    "icon": "FileText",
+    "path": "/documents",
+    "isActive": false,
+    "isAvailable": false
+  },
+  {
+    "Id": 8,
+    "label": "Analytics",
+    "icon": "BarChart3",
+    "path": "/analytics",
+    "isActive": false,
+    "isAvailable": false
+  }
+]

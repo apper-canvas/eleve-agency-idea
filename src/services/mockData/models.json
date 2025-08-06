@@ -1,0 +1,532 @@
+[
+  {
+    "Id": 1,
+    "firstName": "Sophia",
+    "lastName": "Martinez",
+    "email": "sophia.martinez@email.com",
+    "phone": "+1 (555) 0123",
+    "dateOfBirth": "1997-03-15",
+    "height": 175,
+    "weight": 58,
+    "measurements": {
+      "bust": 86,
+      "waist": 61,
+      "hips": 91,
+      "dress": 2,
+      "shoe": 8
+    },
+    "hairColor": "Brunette",
+    "eyeColor": "Brown",
+    "categories": ["Fashion", "Commercial", "Editorial"],
+    "experience": "Professional",
+    "rates": {
+      "hourly": 250,
+      "halfDay": 1200,
+      "fullDay": 2000
+    },
+    "availability": "Available",
+    "profilePhoto": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=600&fit=crop&crop=faces",
+    "portfolio": [
+      {
+        "id": "p1_1",
+        "category": "Headshots",
+        "url": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600&h=800&fit=crop&crop=faces",
+        "caption": "Professional headshot",
+        "order": 1
+      },
+      {
+        "id": "p1_2",
+        "category": "Fashion",
+        "url": "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=600&h=800&fit=crop&crop=faces",
+        "caption": "Fashion editorial shoot",
+        "order": 2
+      },
+      {
+        "id": "p1_3",
+        "category": "Commercial",
+        "url": "https://images.unsplash.com/photo-1506863530036-1efeddceb993?w=600&h=800&fit=crop&crop=faces",
+        "caption": "Commercial lifestyle",
+        "order": 3
+      }
+    ],
+    "createdAt": "2024-01-15T10:30:00Z",
+    "updatedAt": "2024-01-20T14:45:00Z"
+  },
+  {
+    "Id": 2,
+    "firstName": "Alexander",
+    "lastName": "Chen",
+    "email": "alex.chen@email.com",
+    "phone": "+1 (555) 0124",
+    "dateOfBirth": "1994-07-22",
+    "height": 185,
+    "weight": 78,
+    "measurements": {
+      "chest": 101,
+      "waist": 81,
+      "hips": 96,
+      "suit": 40,
+      "shoe": 11
+    },
+    "hairColor": "Black",
+    "eyeColor": "Dark Brown",
+    "categories": ["Fashion", "Commercial", "Fitness"],
+    "experience": "Professional",
+    "rates": {
+      "hourly": 300,
+      "halfDay": 1500,
+      "fullDay": 2500
+    },
+    "availability": "Booked",
+    "profilePhoto": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=600&fit=crop&crop=faces",
+    "portfolio": [
+      {
+        "id": "p2_1",
+        "category": "Headshots",
+        "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=800&fit=crop&crop=faces",
+        "caption": "Professional portrait",
+        "order": 1
+      },
+      {
+        "id": "p2_2",
+        "category": "Fashion",
+        "url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&h=800&fit=crop&crop=faces",
+        "caption": "Designer menswear",
+        "order": 2
+      },
+      {
+        "id": "p2_3",
+        "category": "Fitness",
+        "url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=800&fit=crop&crop=faces",
+        "caption": "Athletic wear campaign",
+        "order": 3
+      }
+    ],
+    "createdAt": "2024-01-10T09:15:00Z",
+    "updatedAt": "2024-01-25T11:20:00Z"
+  },
+  {
+    "Id": 3,
+    "firstName": "Isabella",
+    "lastName": "Johnson",
+    "email": "isabella.johnson@email.com",
+    "phone": "+1 (555) 0125",
+    "dateOfBirth": "1999-11-08",
+    "height": 178,
+    "weight": 60,
+    "measurements": {
+      "bust": 84,
+      "waist": 63,
+      "hips": 89,
+      "dress": 4,
+      "shoe": 9
+    },
+    "hairColor": "Blonde",
+    "eyeColor": "Blue",
+    "categories": ["Editorial", "Runway", "Commercial"],
+    "experience": "Emerging",
+    "rates": {
+      "hourly": 200,
+      "halfDay": 950,
+      "fullDay": 1500
+    },
+    "availability": "Available",
+    "profilePhoto": "https://images.unsplash.com/photo-1488716820095-cbe80883c496?w=400&h=600&fit=crop&crop=faces",
+    "portfolio": [
+      {
+        "id": "p3_1",
+        "category": "Headshots",
+        "url": "https://images.unsplash.com/photo-1488716820095-cbe80883c496?w=600&h=800&fit=crop&crop=faces",
+        "caption": "Natural beauty shot",
+        "order": 1
+      },
+      {
+        "id": "p3_2",
+        "category": "Editorial",
+        "url": "https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=600&h=800&fit=crop&crop=faces",
+        "caption": "Magazine editorial",
+        "order": 2
+      },
+      {
+        "id": "p3_3",
+        "category": "Full Body",
+        "url": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&h=800&fit=crop&crop=faces",
+        "caption": "Full length fashion",
+        "order": 3
+      }
+    ],
+    "createdAt": "2024-01-12T16:45:00Z",
+    "updatedAt": "2024-01-22T13:30:00Z"
+  },
+  {
+    "Id": 4,
+    "firstName": "Marcus",
+    "lastName": "Williams",
+    "email": "marcus.williams@email.com",
+    "phone": "+1 (555) 0126",
+    "dateOfBirth": "1992-05-30",
+    "height": 188,
+    "weight": 85,
+    "measurements": {
+      "chest": 106,
+      "waist": 84,
+      "hips": 99,
+      "suit": 42,
+      "shoe": 12
+    },
+    "hairColor": "Black",
+    "eyeColor": "Brown",
+    "categories": ["Fashion", "Editorial", "Fitness"],
+    "experience": "Professional",
+    "rates": {
+      "hourly": 350,
+      "halfDay": 1750,
+      "fullDay": 2800
+    },
+    "availability": "Limited",
+    "profilePhoto": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=600&fit=crop&crop=faces",
+    "portfolio": [
+      {
+        "id": "p4_1",
+        "category": "Headshots",
+        "url": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&h=800&fit=crop&crop=faces",
+        "caption": "Studio portrait",
+        "order": 1
+      },
+      {
+        "id": "p4_2",
+        "category": "Editorial",
+        "url": "https://images.unsplash.com/photo-1566492031773-4f4e44671d66?w=600&h=800&fit=crop&crop=faces",
+        "caption": "Magazine cover shoot",
+        "order": 2
+      },
+      {
+        "id": "p4_3",
+        "category": "Fashion",
+        "url": "https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?w=600&h=800&fit=crop&crop=faces",
+        "caption": "Designer collection",
+        "order": 3
+      }
+    ],
+    "createdAt": "2024-01-08T12:00:00Z",
+    "updatedAt": "2024-01-28T09:15:00Z"
+  },
+  {
+    "Id": 5,
+    "firstName": "Aria",
+    "lastName": "Patel",
+    "email": "aria.patel@email.com",
+    "phone": "+1 (555) 0127",
+    "dateOfBirth": "1996-09-12",
+    "height": 172,
+    "weight": 55,
+    "measurements": {
+      "bust": 81,
+      "waist": 58,
+      "hips": 86,
+      "dress": 0,
+      "shoe": 7
+    },
+    "hairColor": "Black",
+    "eyeColor": "Brown",
+    "categories": ["Commercial", "Beauty", "Editorial"],
+    "experience": "Professional",
+    "rates": {
+      "hourly": 275,
+      "halfDay": 1300,
+      "fullDay": 2200
+    },
+    "availability": "Available",
+    "profilePhoto": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=600&fit=crop&crop=faces",
+    "portfolio": [
+      {
+        "id": "p5_1",
+        "category": "Headshots",
+        "url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&h=800&fit=crop&crop=faces",
+        "caption": "Beauty headshot",
+        "order": 1
+      },
+      {
+        "id": "p5_2",
+        "category": "Commercial",
+        "url": "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600&h=800&fit=crop&crop=faces",
+        "caption": "Beauty campaign",
+        "order": 2
+      },
+      {
+        "id": "p5_3",
+        "category": "Editorial",
+        "url": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=600&h=800&fit=crop&crop=faces",
+        "caption": "Fashion editorial",
+        "order": 3
+      }
+    ],
+    "createdAt": "2024-01-14T14:20:00Z",
+    "updatedAt": "2024-01-26T16:40:00Z"
+  },
+  {
+    "Id": 6,
+    "firstName": "Ethan",
+    "lastName": "Rodriguez",
+    "email": "ethan.rodriguez@email.com",
+    "phone": "+1 (555) 0128",
+    "dateOfBirth": "1998-01-25",
+    "height": 182,
+    "weight": 75,
+    "measurements": {
+      "chest": 98,
+      "waist": 79,
+      "hips": 94,
+      "suit": 38,
+      "shoe": 10
+    },
+    "hairColor": "Brown",
+    "eyeColor": "Green",
+    "categories": ["Commercial", "Fitness", "Lifestyle"],
+    "experience": "Emerging",
+    "rates": {
+      "hourly": 180,
+      "halfDay": 850,
+      "fullDay": 1300
+    },
+    "availability": "Available",
+    "profilePhoto": "https://images.unsplash.com/photo-1463453091185-61582044d556?w=400&h=600&fit=crop&crop=faces",
+    "portfolio": [
+      {
+        "id": "p6_1",
+        "category": "Headshots",
+        "url": "https://images.unsplash.com/photo-1463453091185-61582044d556?w=600&h=800&fit=crop&crop=faces",
+        "caption": "Fresh headshot",
+        "order": 1
+      },
+      {
+        "id": "p6_2",
+        "category": "Commercial",
+        "url": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&h=800&fit=crop&crop=faces",
+        "caption": "Lifestyle commercial",
+        "order": 2
+      },
+      {
+        "id": "p6_3",
+        "category": "Fitness",
+        "url": "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=600&h=800&fit=crop&crop=faces",
+        "caption": "Athletic shoot",
+        "order": 3
+      }
+    ],
+    "createdAt": "2024-01-18T11:30:00Z",
+    "updatedAt": "2024-01-24T15:20:00Z"
+  },
+  {
+    "Id": 7,
+    "firstName": "Zara",
+    "lastName": "Thompson",
+    "email": "zara.thompson@email.com",
+    "phone": "+1 (555) 0129",
+    "dateOfBirth": "1995-12-03",
+    "height": 180,
+    "weight": 62,
+    "measurements": {
+      "bust": 88,
+      "waist": 64,
+      "hips": 93,
+      "dress": 6,
+      "shoe": 9
+    },
+    "hairColor": "Red",
+    "eyeColor": "Hazel",
+    "categories": ["Fashion", "Editorial", "Runway"],
+    "experience": "Professional",
+    "rates": {
+      "hourly": 320,
+      "halfDay": 1600,
+      "fullDay": 2600
+    },
+    "availability": "Booked",
+    "profilePhoto": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=600&fit=crop&crop=faces",
+    "portfolio": [
+      {
+        "id": "p7_1",
+        "category": "Headshots",
+        "url": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&h=800&fit=crop&crop=faces",
+        "caption": "Striking portrait",
+        "order": 1
+      },
+      {
+        "id": "p7_2",
+        "category": "Fashion",
+        "url": "https://images.unsplash.com/photo-1479936343636-73cdc5aae0c3?w=600&h=800&fit=crop&crop=faces",
+        "caption": "High fashion editorial",
+        "order": 2
+      },
+      {
+        "id": "p7_3",
+        "category": "Editorial",
+        "url": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=600&h=800&fit=crop&crop=faces",
+        "caption": "Artistic portrait",
+        "order": 3
+      }
+    ],
+    "createdAt": "2024-01-05T08:45:00Z",
+    "updatedAt": "2024-01-30T12:10:00Z"
+  },
+  {
+    "Id": 8,
+    "firstName": "Cameron",
+    "lastName": "Davis",
+    "email": "cameron.davis@email.com",
+    "phone": "+1 (555) 0130",
+    "dateOfBirth": "1993-04-17",
+    "height": 183,
+    "weight": 76,
+    "measurements": {
+      "chest": 100,
+      "waist": 80,
+      "hips": 95,
+      "suit": 40,
+      "shoe": 10
+    },
+    "hairColor": "Blonde",
+    "eyeColor": "Blue",
+    "categories": ["Commercial", "Lifestyle", "Fashion"],
+    "experience": "Professional",
+    "rates": {
+      "hourly": 290,
+      "halfDay": 1400,
+      "fullDay": 2300
+    },
+    "availability": "Available",
+    "profilePhoto": "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=400&h=600&fit=crop&crop=faces",
+    "portfolio": [
+      {
+        "id": "p8_1",
+        "category": "Headshots",
+        "url": "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=600&h=800&fit=crop&crop=faces",
+        "caption": "Classic headshot",
+        "order": 1
+      },
+      {
+        "id": "p8_2",
+        "category": "Commercial",
+        "url": "https://images.unsplash.com/photo-1567515004624-219c11d31f2e?w=600&h=800&fit=crop&crop=faces",
+        "caption": "Brand campaign",
+        "order": 2
+      },
+      {
+        "id": "p8_3",
+        "category": "Fashion",
+        "url": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&h=800&fit=crop&crop=faces",
+        "caption": "Casual fashion",
+        "order": 3
+      }
+    ],
+    "createdAt": "2024-01-11T13:25:00Z",
+    "updatedAt": "2024-01-27T10:55:00Z"
+  },
+  {
+    "Id": 9,
+    "firstName": "Luna",
+    "lastName": "Kim",
+    "email": "luna.kim@email.com",
+    "phone": "+1 (555) 0131",
+    "dateOfBirth": "2000-06-19",
+    "height": 170,
+    "weight": 52,
+    "measurements": {
+      "bust": 79,
+      "waist": 59,
+      "hips": 84,
+      "dress": 0,
+      "shoe": 7
+    },
+    "hairColor": "Black",
+    "eyeColor": "Brown",
+    "categories": ["Beauty", "Commercial", "Editorial"],
+    "experience": "Emerging",
+    "rates": {
+      "hourly": 160,
+      "halfDay": 750,
+      "fullDay": 1200
+    },
+    "availability": "Available",
+    "profilePhoto": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=400&h=600&fit=crop&crop=faces",
+    "portfolio": [
+      {
+        "id": "p9_1",
+        "category": "Headshots",
+        "url": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&h=800&fit=crop&crop=faces",
+        "caption": "Fresh beauty shot",
+        "order": 1
+      },
+      {
+        "id": "p9_2",
+        "category": "Commercial",
+        "url": "https://images.unsplash.com/photo-1502767089025-6572583495b9?w=600&h=800&fit=crop&crop=faces",
+        "caption": "Beauty product ad",
+        "order": 2
+      },
+      {
+        "id": "p9_3",
+        "category": "Editorial",
+        "url": "https://images.unsplash.com/photo-1515552726023-7125c8d07fb3?w=600&h=800&fit=crop&crop=faces",
+        "caption": "Editorial beauty",
+        "order": 3
+      }
+    ],
+    "createdAt": "2024-01-20T17:10:00Z",
+    "updatedAt": "2024-01-29T14:35:00Z"
+  },
+  {
+    "Id": 10,
+    "firstName": "Diego",
+    "lastName": "Silva",
+    "email": "diego.silva@email.com",
+    "phone": "+1 (555) 0132",
+    "dateOfBirth": "1991-10-14",
+    "height": 186,
+    "weight": 82,
+    "measurements": {
+      "chest": 104,
+      "waist": 83,
+      "hips": 97,
+      "suit": 42,
+      "shoe": 11
+    },
+    "hairColor": "Black",
+    "eyeColor": "Brown",
+    "categories": ["Fashion", "Editorial", "Commercial"],
+    "experience": "Professional",
+    "rates": {
+      "hourly": 310,
+      "halfDay": 1550,
+      "fullDay": 2550
+    },
+    "availability": "Limited",
+    "profilePhoto": "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=400&h=600&fit=crop&crop=faces",
+    "portfolio": [
+      {
+        "id": "p10_1",
+        "category": "Headshots",
+        "url": "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600&h=800&fit=crop&crop=faces",
+        "caption": "Professional portrait",
+        "order": 1
+      },
+      {
+        "id": "p10_2",
+        "category": "Fashion",
+        "url": "https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?w=600&h=800&fit=crop&crop=faces",
+        "caption": "Designer menswear",
+        "order": 2
+      },
+      {
+        "id": "p10_3",
+        "category": "Commercial",
+        "url": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=800&fit=crop&crop=faces",
+        "caption": "Brand ambassador",
+        "order": 3
+      }
+    ],
+    "createdAt": "2024-01-07T15:40:00Z",
+    "updatedAt": "2024-01-31T11:25:00Z"
+  }
+]
